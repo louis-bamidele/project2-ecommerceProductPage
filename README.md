@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/louis-bamidele/project2-ecommerceProductPage)
+- Live Site URL: [live site](https://louis-bamidele.github.io/project2-ecommerceProductPage/)
 
 ## My process
 
