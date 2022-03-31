@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="menu">
+       <div class="">
+         <img class="icon-menu" src="images/icon-menu.svg" alt="icon-menu">
+         <ul class="ul">
+           <li>Collections</li>
+           <li>Men</li>
+           <li>Women</li>
+           <li>About</li>
+           <li>Contact</li>
+         </ul>
+         <div id="menu">
+           <img id="closeMenu" src="images/icon-close.svg" alt="">
+           <ul>
+             <li>Collections</li>
+             <li>Men</li>
+             <li>Women</li>
+             <li>About</li>
+             <li>Contact</li>
+           </ul>
+         </div>
+       </div>
+        <img class="logo" src="images/logo.svg" alt="">
+      </div>
+      <div class="profile">
+        <div id="title1" class="title1">
+          <img  class="shopping-cart" src="images/icon-cart.svg" alt="shopping cart logo">
+        </div>
+
+        <img class="avatar" src="images/image-avatar.png" alt="">
+      </div>
+    </nav>
+    <hr>
+  </header>
+  <main id="main">
+    <div id="cart" class="dialog">
+      <div class="">
+
+        <div class="cart-header">
+          <img id="close" src="images/icon-close.svg" alt="">
+          <h5>Cart</h5>
+        </div>
+        <hr>
+        <div class="cart-body">
+          <div id="cart-item">
+            <div class="first-items">
+              <img src="images/image-product-1-thumbnail.jpg" alt="produt-item">
+              <p>Fall Limited Edition Sneakers <br> $125.00 x <span class="cartNumber">0</span> <span class="cartPrice">$0.00</span></p>
+              <img class="delete" src="images/icon-delete.svg" alt="delete-item">
+            </div>
+            <button class="submit" type="button" name="button">Checkout</button>
+          </div>
+          <p class="empty">cart is empty</p>
+        </div>
+      </div>
+    </div>
+    <section class="slideshow">
+      <div class="">
+        <div class="first">
+          <img class=" mySlides fade" onclick="openModal()" src="images/image-product-1.jpg" alt="image product">
+        </div>
+        <div class="first">
+          <img class="mySlides fade" onclick="openModal()" src="images/image-product-2.jpg" alt="image product">
+        </div>
+        <div class="first">
+          <img class="mySlides fade" onclick="openModal()" src="images/image-product-3.jpg" alt="image product">
+        </div>
+        <div class="first">
+          <img class="mySlides fade" onclick="openModal()" src="images/image-product-4.jpg" alt="image product">
+        </div>
+
+      </div>
+      <div class="">
+        <img class="thumbnail active" onclick="currentSlide(1)" src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
+        <img class="thumbnail" onclick="currentSlide(2)" src="images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
+        <img class="thumbnail" onclick="currentSlide(3)" src="images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
+        <img class="thumbnail" onclick="currentSlide(4)" src="images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
+      </div>
+    </section>
+    <!-- open modal -->
+    <section id="myModal" class="openModal">
+      <div class="model">
+        <div class="close">
+          <img onclick="closeModal()" src="images/icon-close.svg" alt="">
+        </div>
+        <div class="modal-content">
+            <div class="first">
+              <img class=" modelSlide fade" src="images/image-product-1.jpg" alt="image-product">
+            </div>
+            <div class="first">
+              <img class="modelSlide fade" src="images/image-product-2.jpg" alt="image-product">
+            </div>
+            <div class="first">
+              <img class="modelSlide fade" src="images/image-product-3.jpg" alt="image-product">
+            </div>
+            <div class="first">
+              <img class="modelSlide fade" src="images/image-product-4.jpg" alt="image-product">
+            </div>
+
+            <div class="next" onclick="plusSlides(1)"> <img class="icon-1" src="images/icon-next.svg" alt="icon-next"> </div>
+            <div class="prev" onclick="plusSlides(-1)"> <img class="icon-2" src="images/icon-previous.svg" alt="icon-previous"> </div>
+
+          <div class="thumbnail-parent">
+            <img class="thumbnail2 active" onclick="currentSlide(1)" src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail">
+            <img class="thumbnail2" onclick="currentSlide(2)" src="images/image-product-2-thumbnail.jpg" alt="product-thumbnail">
+            <img class="thumbnail2" onclick="currentSlide(3)" src="images/image-product-3-thumbnail.jpg" alt="product-thumbnail">
+            <img class="thumbnail2" onclick="currentSlide(4)" src="images/image-product-4-thumbnail.jpg" alt="product-thumbnail">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-product">
+      <div class="product-content">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="price-text">These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h4>$125.00</h4>
+        <p class="discount">$250.00</p>
+        <div class="parent">
+          <div class="first-child">
+            <img class="minus" src="images/icon-minus.svg" alt="minus">
+            <span class="number">0</span>
+            <img class="plus" src="images/icon-plus.svg" alt="plus">
+          </div>
+          <div class="second-child">
+          <img class="ATC-1" src="images/icon-cart.svg" alt="shopping-cart">
+          <span class="ATC-2">  Add to cart</span>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
